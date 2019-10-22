@@ -35,7 +35,7 @@ def flyto(x, y, z, speed):
         
         drone.go(dif_x,dif_y,dif_z,speed)
 
-with open('flight3.txt') as file:
+with open('cube.txt') as file:
     coordinate_list = file.read().splitlines()
 
 drone = tello.Tello()
