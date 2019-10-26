@@ -1,7 +1,3 @@
-
-length = float(input("Enter the scale factor "))
-heightOffset = float(input("Enter the height offset: "))
-
 with open('KAI Logo Scaled 1.txt') as f:
     my_list = f.read().splitlines()
 
@@ -20,13 +16,6 @@ for i in range(len(my_list)):
         y = float(y)
         z = float(z)
 
-        x = x*length
-        y = y*length
-        z = 0
-
-
-        f.write("%d,%d,%d\n" %(round(x),round(y),round(z+heightOffset)))
-        
-        print (x, '**', y, '**', z+heightOffset, '**')
+        f.write("%f,%f,%f\n" %(x,0,y))
     
 f.close()

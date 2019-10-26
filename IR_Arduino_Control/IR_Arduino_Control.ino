@@ -26,11 +26,21 @@ void loop() {
     serialData = Serial.read(); //Reads serial data
     if(serialData == '1')
     {
-      irsend.sendNEC(0xF7C03F, 32); //Send on command
+      for (int i =0; i<20; i++)
+      {
+        irsend.sendNEC(0xF7C03F, 32); //Send on command
+        delay(50);
+      }
+      
     }
     else if(serialData == '0')
     {
-      irsend.sendNEC(0xF740BF, 32); //Send off command
+      for (int i =0; i<20; i++)
+      {
+        irsend.sendNEC(0xF740BF, 32); //Send off command
+        delay(50);
+      }
+      
     }
   }  
 
